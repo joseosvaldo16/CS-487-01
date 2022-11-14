@@ -1,23 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { Inject, ScheduleComponent, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-react-schedule'
 
 function App() {
   
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{width: '50%'}}>
+      <ScheduleComponent>
+        <Inject currentView='Week' services={[Day, Week, WorkWeek, Month, Agenda]}></Inject>
+      </ScheduleComponent>
     </div>
   );
 }
