@@ -1,4 +1,5 @@
 import React, { useState, setState } from 'react'
+import './Form.css'
 
 export default function Form({handleClick}) {
   const [data, setData] = useState({
@@ -45,20 +46,33 @@ export default function Form({handleClick}) {
     })
   }
 
+  
+
   return (
-    <div style={{width: '50%'}}>
-        <label>Name: <input onChange={e => changeName(e)}></input></label>
-        <label>Room: <select onChange={e=> changeRoom(e)} value="Library">
-                        <option value="Library">Library</option>
-                        <option value="Study Hall">Study Hall</option>
-                      </select></label>
-        <label>Start Date: <input onChange={e=>changeStartDate(e)} type="date"></input></label>
-        <label>Start Time: <input onChange={e=>changeStartTime(e)} type="time"></input></label>
-        <label>End Date: <input onChange={e=>changeEndDate(e)} type="date"></input></label>
-        <label>End Time: <input onChange={e=>changeEndTime(e)} type="time"></input></label>
-        <button onClick={() => {handleClick(data)
-                                }}>Submit</button>
-        <button onClick={() => clear()}>Clear</button>
+    <div className = 'content'>
+        
+        <h2>Name: <input className='input' onChange={e => changeName(e)}></input></h2>
+        <div>
+          <h2>Room: <select className='select' onChange={e=> changeRoom(e)} value="Library">
+                          <option className='input' value="Library">Library</option>
+                          <option className='input' value="Study Hall">Study Hall</option>
+                        </select></h2>
+                        </div>
+        <div>  
+          <h2>Start Date: <input className='input' height = {50} onChange={e=>changeStartDate(e)} type="date"></input></h2>
+        </div>
+        <h2>Start Time: <input className='input' onChange={e=>changeStartTime(e)} type="time"></input></h2>
+        <div>
+          <h2>End Date: <input className='input' onChange={e=>changeEndDate(e)} type="date"></input></h2>
+        </div>
+        <h2>End Time: <input className='input' onChange={e=>changeEndTime(e)} type="time"></input></h2>
+        <div className='button-container'>
+          <button className='button' onClick={() => {handleClick(data)
+                                  }}>Submit</button>
+          <button className='right-button' onClick={() => clear()}>Clear</button>
+        </div>
+        
     </div>
   )
 }
+

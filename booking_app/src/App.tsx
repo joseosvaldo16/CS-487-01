@@ -15,8 +15,8 @@ function App() {
       Id: 2,
       ResourceId: 2,
       Subject: "Tim Smith",
-      EndTime: new Date(2022, 10, 15, 7, 30),
-      StartTime: new Date(2022, 10, 15, 6, 30)
+      EndTime: new Date(2022, 10, 15, 8, 30),
+      StartTime: new Date(2022, 10, 15, 7, 30)
     }])
 
   let resourceDataSource = [

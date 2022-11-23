@@ -1,0 +1,29 @@
+.content{
+    position: absolute;   
+    top: 30%;
+    left: 65%;
+    right: 20%; 
+}
+
+.input {
+    line-height: 2em;
+}
+
+.select{
+    height: 32.66px;
+}
+
+.button{
+    height: 32.66px;
+    width: 80px;
+}
+
+.right-button{
+    float: right;
+    height: 32.66px;
+    width: 80px;
+}
+
+.button-container{
+    max-width: 237.92px;
+}
