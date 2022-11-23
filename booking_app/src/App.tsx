@@ -38,7 +38,7 @@ function App() {
   }
 
     return (<div>
-        <div style={{width: '50%'}}>
+        <div style={{paddingLeft: '10rem', width: '40%'}}>
           <ScheduleComponent eventSettings={{dataSource: events}}>
 
             <ResourcesDirective>
